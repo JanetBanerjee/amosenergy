@@ -1,0 +1,25 @@
+<div class="container new-provider">
+  <div class="row">
+    <h2 class="new-header"> Add a New Provider </h2>
+    <%= bootstrap_form_for(@provider, html: { class: 'form-inline' }) do |f| %>
+    <%= f.text_field :name %>
+    <%= f.text_field :price %>
+    <%= f.check_box :e_plan %>
+    <%= f.text_field :energy_price %>
+    <%= f.text_field :average_rate %>
+    <%= f.text_field :average_e_rate %>
+    <%= f.text_field :low_rate %>
+    <%= f.text_field :med_rate %>
+    <%= f.text_field :high_rate %>
+    <%= f.text_field :base_charge %>
+    <%= f.text_field :term %>
+    <%= f.text_field :term_fee %>
+
+    <div class="new-store-btn">
+      <button type="submit" class="btn btn-primary">
+        Submit
+      </button>
+    </div>
+    <% end %>
+  </div>
+</div>

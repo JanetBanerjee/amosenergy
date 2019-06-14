@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails amosenergy: test" uuid="a6657aaf-1cbb-45a6-9430-650329247ddd">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/amosenergy_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails amosenergy: development" uuid="2642c1a7-f1d0-4ef6-9e6e-0bb8874f95b5">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/amosenergy_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails amosenergy: production" uuid="0780f8f0-9347-4dd3-92bb-6349cbe5605e">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/untitled6_production</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails amosenergy: default" uuid="2d071214-3db3-449e-ac3d-dfdda216bbbf">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/amosenergy_development</jdbc-url>
+    </data-source>
+  </component>
+</project>
