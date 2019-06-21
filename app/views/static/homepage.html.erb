@@ -1,44 +1,27 @@
 
 <div class="flexslider">
-  <ul class="slides">
-    <li>
-      <%= image_tag "slider6.jpg" %>>
-      <p class="flex-caption">Buyers will prefer to pay a lower price for the same product and value.</p>
+  <ul class="slides slider-size">
+    <li class="slider-size">
+      <%= image_tag "amos slider 1.png" %>>
     </li>
     <li>
-      <%= image_tag "amos_solar.jpg" %>
-      <p class="flex-caption">God said, " Let there be light", and there was light.</p>
+      <%= image_tag "slider2.jpg" %>
     </li>
     <li>
-      <%= image_tag "afrifamily_original.jpg" %>
-      <p class="flex-caption">Buyers will prefer to pay a lower price for the same product and value</p>
+      <%= image_tag "slider3.jpg" %>
     </li>
     <li>
-      <%= image_tag "amos_solar.jpg" %>
-      <p class="flex-caption">God said, " Let there be light", and there was light.</p>
+      <%= image_tag "slider2" %>
     </li>
   </ul>
 </div>
-
-<% if user_signed_in? %>
-  <li><%= link_to('My Account', edit_user_registration_path) %></li>
-  <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
-<% else %>
-  <li><%= link_to('Sign in', new_user_session_path)%></li>
-  <li><%= link_to('Sign up', new_user_registration_path) %></li>
-<% end %>
-
 
 <section class="switch-online-area">
   <div class="container">
     <div class="row">
       <div class="said">
-        <h2 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.10s"><strong>God said, <i class="fa fa-bullhorn"></i></strong> &nbsp; "Let there be Light" and there was light.</h2>
-        <h2 class="wow fadeInRight" data-wow-duration="3s" data-wow-delay="0.35s"><br></h2>
-        <h2 class="wow fadeInUp" data-wow-duration="4s" data-wow-delay="0.40s"></h2>
+        <h2><b>God said,</b> "Let there be Light" and there was light.</h2>
       </div>
-      <p> a buyer will prefer to pay a lower price for the same product, service and value if given the choiceLondon</p>
-      <p>.</p>
       <p><h2>Switch to Amos Energy for reduced rates. You have the power to choose</h2></p>
     </div>
     <h2 class="wow fadeInRight" data-wow-duration="3s" data-wow-delay="0.35s"><h3>It is a long established fact that a buyer will prefer to pay a lower price for the same product, service and value if given the choice.</h3><br></h2>
@@ -51,14 +34,14 @@
     <div class="col-md-6 col-sm-6 col-xs-12">
       <div class="offer">
         <div class="box">
-          <p>Residential Energy<p><p> Business Energy</p>
+          <p><%= link_to 'Residential Energy' %><p>
         </div>
       </div>
     </div>
     <div class="col-md-6 col-sm-6 col-xs-12">
       <div class="offer">
         <div class="box">
-          <p>Reduced Rates<p><p>You have the power to choose<p/>
+          <p><%= link_to 'Business Energy' %></p>
         </div>
       </div>
     </div>
@@ -68,7 +51,7 @@
 
 
       <h2> Amos Energy was started by a group of private investors with these goals:<p/>
-    </p> to pass savings to our customers and to offer reduced rates; </p>to provide opportunities and good compensation plans to our consultants.<p/></h2>
+    </p> to pass savings to our customers and to offer reduced rates </p>while provideing opportunities and good compensation plans to our consultants.<p/></h2>
 
     <h2>Amos Energy Stake holders collectively have more than 20 years experience in business development.</h2>
       </p> Moving to Amos Energy is easy. Enjoy reduced rates when you sign up for any  term. </p> Sign up as a new customer or  business owner and see how low energy rates can help reduce your over head costs </p>
@@ -85,57 +68,34 @@
       <div class="col-md-offset-1 col-md-2 col-sm-12 col-xs-12">
         <div class="single-step-box">
           <h2> NO DEPOSITS</h2>
-          <a href="" class="button">Sign Up</a>
         </div>
       </div>
 
       <div class="col-md-2 col-sm-12 col-xs-12">
         <div class="single-step-box">
           <h2>NO CREDIT CHECK</h2>
-          <a href="" class="button">Sign Up</a>
         </div>
       </div>
       <div class="col-md-2 col-sm-12 col-xs-12">
         <div class="single-step-box">
           <h2>NO EXIT PENALTY</h2>
-          <a href="" class="button">Sign Up</a>
         </div>
+        <a href="" class="button">Sign Up Today!</a>
       </div>
       <div class="col-md-2 col-sm-12 col-xs-12">
         <div class="single-step-box">
           <h2>Term-12-6-3-months</h2>
-          <a href="" class="button">Sign Up</a>
         </div>
       </div>
       <div class="col-md-2 col-sm-12 col-xs-12 col-sm-12 col-xs-12">
         <div class="single-step-box">
           <h2> Amos Energy  for Low Rates</h2>
-          <a href="" class="button">Sign Up</a>
         </div>
+
       </div>
     </div>
   </div>
 </div>
-</div>
-
-<div class="about-deal">
-  <div class="container">
-    <div class="row">
-      <p><b> <br> <br><br>
-        <a href="#"></a><br><br>
-        <a href="#"> Amos Energy Electricity Facts Label-</a>
-        <a href="#">Amos Energy Terms of Service-</a>
-        <a href="#">Amos Energy Your rights as a Customer-</a> You view these at amosenergy.net/electricityfacts
-      </b></p>
-      <hr>
-      <ul>
-        <li><a href="#">© Amos Energy 2017 </a></li>
-        <li><a href="#">Terms and Conditions </a></li>
-        <li><a href="#">Privacy </a></li>
-        <li><a href="#">Amos Energy Inc. PUC certificate no. 10250</a></li>
-      </ul>
-    </div>
-  </div>
 </div>
 
 

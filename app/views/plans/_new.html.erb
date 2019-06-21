@@ -1,0 +1,8 @@
+<%= bootstrap_form_for(@plan, html: { class: 'form-inline' }) do |f| %>
+  <% f.hidden_field :provider_id, :value => @provider.id %>
+  <% f.hidden_field :term_length, :value => @provider.term %>
+
+  <button type="submit" class="btn btn-primary">
+    Purchase
+  </button>
+<% end %>

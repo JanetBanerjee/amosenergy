@@ -1,0 +1,153 @@
+
+<div class="container">
+  <div class="row">
+    <div class="show-header text-center">
+      <h1>
+        <%= @provider.name %>
+      </h1>
+    </div>
+    <div class="show-body">
+      <div class="col-md-6 show-price text-center">
+        <h3>
+          Average Price:
+        </h3>
+        <p>
+          <%= @provider.price %>
+        </p>
+      </div>
+      <div class="col-md-6 show-price text-center">
+        <h3>
+          Energy Price:
+        </h3>
+        <p>
+          <%= @provider.energy_price %>
+        </p>
+      </div>
+    </div>
+      <h3 class="text-center"><b>
+        Price based on usage:
+      </b></h3>
+      <div class="col-md-4 show-tiers text-center">
+        <p>
+          0-800 kWh: <b><%= @provider.low_rate %></b> /kWh
+        </p>
+      </div>
+      <div class="col-md-4 show-tiers text-center">
+        <p>
+          801-1200 kWh: <b><%= @provider.med_rate %></b> /kWh
+        </p>
+      </div>
+      <div class="col-md-4 show-tiers text-center">
+        <p>
+          >1200 kWh: <b><%= @provider.high_rate %></b> /kWh
+        </p>
+      </div>
+      <p class="text-center show-base">
+        Base Charge: <%= @provider.base_charge %>
+      </p>
+      <p class="text-center">
+        Term length of <%= @provider.term %>, with a <%= @provider.term_fee %> early termination fee
+      </p>
+    <div class="show-btn-box text-center">
+      <%= link_to "Purchase", :class => "prov-button text-center" %>
+    </div>
+  </div>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+            Sign Up</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <%= render 'plans/plan' %>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+            Confirm Plan</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+          <%= @provider.name %>
+          <%= bootstrap_form_for(@plan, html: { class: 'form-inline' }) do |f| %>
+            <% f.hidden_field :provider_id, :value => @provider.id %>
+            <% f.hidden_field :term_length, :value => @provider.term %>
+
+            <button type="submit" class="btn btn-primary">
+              Purchase
+            </button>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+            Payment</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-3">
+            <h1>New Payment</h1>
+
+            <% if @payment.errors.any? %>
+              <div class="alert alert-danger">
+                <ul>
+                  <% @payment.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+            <div class="well">
+              <%= form_for @payment do |f| %>
+                <div class="form-group">
+                  <%= f.label :first_name, class: "control-label" %>
+                  <%= f.text_field :first_name, class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :last_name, class: "control-label" %>
+                  <%= f.text_field :last_name,class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :credit_card_number, class: "control-label" %>
+                  <%= f.text_field :credit_card_number, class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :expiration_month, class: "control-label" %>
+                  <%= f.select :expiration_month, months, {}, class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :expiration_year, class: "control-label" %>
+                  <%= f.select :expiration_year, years, {}, class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :card_security_code, class: "control-label" %>
+                  <%= f.text_field :card_security_code, class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :amount, class: "control-label" %>
+                  <%= f.number_field :amount, class: "form-control", step: "0.01" %>
+                </div>
+                <div class="form-group">
+                  <%= f.submit "Charge Credit Card", class: "btn btn-primary" %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+

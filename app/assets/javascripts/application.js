@@ -11,10 +11,11 @@
 // about supported directives.
 //
 //= require jquery3
-//= require bootstrap-sprockets
+//= require popper
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require jquery.flexslider
 //= require jquery.flexslider-min
 //= require_tree .
@@ -22,6 +23,6 @@
 $(document).on("turbolinks:load", function() {
     $('.flexslider').flexslider({
         animation: "slide",
-        itemWidth: 800,
+        itemWidth: 1300,
     });
 });

@@ -4,6 +4,14 @@ class ProvidersController < ApplicationController
     @provider = Provider.all
   end
 
+  def business
+    @provider = Provider.all
+  end
+
+  def residential
+    @provider = Provider.all
+  end
+
   def create
     @provider = Provider.create(params.required(:provider).permit(:name, :user_id, :price, :e_plan,
                                                                    :energy_price, :average_rate, :average_e_rate,
@@ -13,7 +21,7 @@ class ProvidersController < ApplicationController
     @provider.user_id = current_user.id
 
     if @provider.save!
-      redirect_to provider_path
+      redirect_to @provider
     else
       render :new
     end
@@ -24,6 +32,11 @@ class ProvidersController < ApplicationController
   end
 
   def show
+    @provider = Provider.find(params[:id])
 
+    @plan = Plan.new
+    @payment = Payment.new
   end
+
 end
+

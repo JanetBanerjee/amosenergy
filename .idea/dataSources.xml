@@ -23,7 +23,7 @@
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/config/database.yml</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/untitled6_production</jdbc-url>
+      <jdbc-url>jdbc:postgresql://ec2-54-225-72-238.compute-1.amazonaws.com:5432/d1sk8gsk2a043l</jdbc-url>
     </data-source>
     <data-source source="LOCAL" name="Rails amosenergy: default" uuid="2d071214-3db3-449e-ac3d-dfdda216bbbf">
       <driver-ref>postgresql</driver-ref>
