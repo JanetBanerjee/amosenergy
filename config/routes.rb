@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   get "/business" => "providers#business"
   get "/launchyourbusiness" => "static#launchyourbusiness"
   get "/new" => "providers#new"
+  get "/contact" => "static#contact"
+  get "/business_landing" => "providers#business_landing"
+  get "/residential_landing" => "providers#residential_landing"
 
 end

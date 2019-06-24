@@ -1,3 +1,30 @@
+<div class="header-top">
+  <div class="container">
+    <div class="col-md-4">
+      <div class="logo">
+        <a href="index.html"><img src="assets/images/home-page/logo.png" alt=""></a>
+      </div>
+    </div>
+    <div class="col-md-8 text-right">
+      <div class="top-menu">
+        <div class="top-top-menu">
+          <a href="http://amosenergy.net/"> <i class="fa fa-envelope"></i> info@amosenergy.net</a>
+          <a href="#">Pay bills</a>
+          <a href="#">Launch your own business</a>
+        </div>
+        <div class="top-bottom-menu">
+          <a>call 1(877)266-7729</a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-google-plus"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <nav class="bottom navbar navbar-default">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -16,11 +43,10 @@
         <li class="nav-image">
           <%= link_to image_tag('logo.png'), root_path %>
         </li>
-        <li class="nav-link"><%= link_to 'Residential Providers', residential_path %></li>
-        <li class="nav-link"><%= link_to 'Business Providers', business_path %></li>
-        <li class="nav-link"><%= link_to 'Sign Up', providers_path %></li>
+        <li class="nav-link"><%= link_to 'Residential Energy', residential_landing_path %></li>
+        <li class="nav-link"><%= link_to 'Business Energy', business_landing_path %></li>
         <li class="nav-link"><%= link_to 'Add Provider', new_provider_path %></li>
-        <li class="nav-link"><a href="contact.html"><i class=""></i> Contact us</a></li>
+        <li class="nav-link"><%= link_to 'Contact', contact_path %></li>
       </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
