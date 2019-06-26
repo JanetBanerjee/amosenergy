@@ -10,7 +10,8 @@ class PlansController < ApplicationController
   end
 
   def create
-    @plan = Plan.new(params.required(:plan).permit(:user_id, :provider_id, :term_length))
+    @plan = Plan.new(params.required(:plan).permit(:user_id, :provider_id, :term_length, :esi_id, :veterans, :cert,
+                                                   :term, :service_type, :energy_type, :consultant_id, :terms))
 
     @plan.user_id = current_user.id
 

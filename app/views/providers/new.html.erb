@@ -1,25 +1,31 @@
 <div class="container new-provider">
   <div class="row">
-    <h2 class="new-header"> Add a New Provider </h2>
-    <%= bootstrap_form_for(@provider, html: { class: 'form-inline' }) do |f| %>
-    <%= f.text_field :name %>
-    <%= f.text_field :price %>
-    <%= f.check_box :e_plan %>
-    <%= f.text_field :energy_price %>
-    <%= f.text_field :average_rate %>
-    <%= f.text_field :average_e_rate %>
-    <%= f.text_field :low_rate %>
-    <%= f.text_field :med_rate %>
-    <%= f.text_field :high_rate %>
-    <%= f.text_field :base_charge %>
-    <%= f.text_field :term %>
-    <%= f.text_field :term_fee %>
+    <div class="col-xs-10 col-xs-offset-1">
+      <h1>
+        Add a New Provider
+      </h1>
 
-    <div class="new-store-btn">
-      <button type="submit" class="btn btn-primary">
-        Submit
-      </button>
+      <div class="well">
+        <%= bootstrap_form_for(@provider, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10") do |f| %>
+        <%= f.text_field :name %>
+        <%= f.text_field :price %>
+        <%= f.check_box :e_plan %>
+        <%= f.text_field :energy_price %>
+        <%= f.text_field :average_rate %>
+        <%= f.text_field :average_e_rate %>
+        <%= f.text_field :low_rate %>
+        <%= f.text_field :med_rate %>
+        <%= f.text_field :high_rate %>
+        <%= f.text_field :base_charge %>
+        <%= f.text_field :term %>
+        <%= f.text_field :term_fee %>
+        <div class="new-store-btn">
+          <button type="submit" class="btn btn-primary">
+            Submit
+          </button>
+        </div>
+        <% end %>
+      </div>
     </div>
-    <% end %>
   </div>
 </div>

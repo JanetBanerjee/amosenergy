@@ -60,6 +60,8 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'popper_js'
+gem 'administrate'
+gem 'bourbon'
 
 
 gem 'bootstrap_form'

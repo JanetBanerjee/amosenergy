@@ -45,8 +45,17 @@
         </li>
         <li class="nav-link"><%= link_to 'Residential Energy', residential_landing_path %></li>
         <li class="nav-link"><%= link_to 'Business Energy', business_landing_path %></li>
-        <li class="nav-link"><%= link_to 'Add Provider', new_provider_path %></li>
         <li class="nav-link"><%= link_to 'Contact', contact_path %></li>
+        <% if user_signed_in? %>
+          <% if current_user.user_type == 'admin' %>
+            <li class="nav-link">
+              <%= link_to "Admin Dashboard", admin_root_path %>
+            </li>
+            <li class="nav-link">
+              <%= link_to 'Add Provider', new_provider_path %>
+            </li>
+          <% end %>
+          <% end %>
       </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>

@@ -1,0 +1,40 @@
+<div class="container">
+  <h1 class="text-center res-prov-head"> Residential Energy</h1>
+
+  <div class="col-xs-4 tier-buttons text-center">
+    <%= link_to "500 kWh", residential_500_path %>
+  </div>
+  <div class="col-xs-4  tier-buttons text-center">
+    <%= link_to "1000 kWh", residential_1000_path %>
+  </div>
+  <div class="col-xs-4  tier-buttons text-center">
+    <%= link_to "2000 kWh", residential_2000_path %>
+  </div>
+  <% @provider.in_groups_of(3, false).each do |group| %>
+    <div class='row'>
+      <% group.each do |p| %>
+        <div class='col-md-3 prov-box'>
+          <div class="prov-header-box">
+            <h3 class="text-center prov-name">
+              <%= link_to p.name %>
+            </h3>
+          </div>
+          <h3 class="text-center prov-price">
+            <%= p.low_rate %><small> /kWh</small>
+          </h3>
+          <p class="text-center">
+            <%= p.description %>
+          </p>
+          <div class="prov-term">
+            <p class="text-center">
+              <%= p.term %> Term
+            </p>
+          </div>
+          <div class="prov-btn-box">
+            <%= link_to "Select", provider_path(p), :class => "prov-button text-center" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

@@ -8,7 +8,31 @@ class ProvidersController < ApplicationController
     @provider = Provider.all
   end
 
+  def business_500
+    @provider = Provider.all
+  end
+
+  def business_1000
+    @provider = Provider.all
+  end
+
+  def business_2000
+    @provider = Provider.all
+  end
+
   def residential
+    @provider = Provider.all
+  end
+
+  def residential_500
+    @provider = Provider.all
+  end
+
+  def residential_1000
+    @provider = Provider.all
+  end
+
+  def residential_2000
     @provider = Provider.all
   end
 

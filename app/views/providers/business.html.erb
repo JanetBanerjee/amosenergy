@@ -1,61 +1,15 @@
+
+
 <div class="container">
   <h1 class="text-center res-prov-head"> Business Energy</h1>
-  <% @provider.in_groups_of(3, false).each do |group| %>
-    <div class='row'>
-      <% group.each do |p| %>
-        <div class='col-md-3 prov-box'>
-          <div class="prov-header-box">
-            <h3 class="text-center prov-name">
-              <%= link_to p.name %>
-            </h3>
-          </div>
-          <p class="text-center prov-price">
-            <%= p.price %>
-          </p>
-          <div class="col-md-4 prov-tier-title text-center">
-            <p>
-              Low
-            </p>
-            <hr class="prov-hr">
-          </div>
-          <div class="col-md-4 prov-tier-title text-center">
-            <p>
-              Medium
-            </p>
-            <hr class="prov-hr">
-          </div>
-          <div class="col-md-4 prov-tier-title text-center">
-            <p>
-              High
-            </p>
-            <hr class="prov-hr">
-          </div>
-          <div class="col-md-4 text-center">
-            <p>
-              <%= p.low_rate %>
-            </p>
-          </div>
-          <div class="col-md-4 text-center">
-            <p>
-              <%= p.med_rate %>
-            </p>
-          </div>
-          <div class="col-md-4 text-center">
-            <p>
-              <%= p.high_rate %>
-            </p>
-          </div>
-          <p class="text-center"> ---------------------------- </p>
-          <div class="prov-term">
-            <p class="text-center">
-              <%= p.term %> Term
-            </p>
-          </div>
-          <div class="prov-btn-box">
-            <%= link_to "Select", provider_path(p), :class => "prov-button text-center" %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+
+  <div class="col-xs-4 tier-buttons text-center">
+    <%= link_to "500 kWh", business_500_path %>
+  </div>
+  <div class="col-xs-4  tier-buttons text-center">
+    <%= link_to "1000 kWh", business_1000_path %>
+  </div>
+  <div class="col-xs-4  tier-buttons text-center">
+    <%= link_to "2000 kWh", business_2000_path %>
+  </div>
 </div>

@@ -16,7 +16,19 @@
 }
 
 .res-prov-head {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #046937;
+  color: white;
+  border-radius: 8px;
+}
 
+.tier-buttons {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #fff17c;
+  margin-bottom: 50px;
+  font-size: 24px;
 }
 
 .prov-header-box {
@@ -37,6 +49,23 @@
   padding-bottom: 7px;
   background-color: #fff17c;
   color: black;
+}
+
+.res-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 50%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.new-form {
+  padding-left: 10px;
 }
 
 .prov-tier-title {
@@ -74,6 +103,23 @@
 
 .prov-term {
 
+}
+
+.busi-button {
+  margin-top: 150px;
+  background-color: #046937;
+  padding: 12px 60px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition-duration: 0.4s;
+}
+
+.busi-button:hover {
+  border: 2px solid #003300; /* Green */
+  text-decoration: none !important;
+  color: black;
 }
 
 .show-header {
